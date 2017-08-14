@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Web Socket</title>
-    <!-- setting up socket.io on the front end -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
-    <link href="/styles.css" rel="stylesheet" />
-  </head>
-  <body>
-    <h1>Hello!</h1>
+    <head>
+        <meta charset="utf-8">
+        <title>WebScockets 101</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+      <div id="mario-chat">
+        <div id="chat-window">
+          <div id="output"></div>
+        </div>
 
-    <!-- run chat.js file on entering the site -->
-    <script src="/chat.js"></script>
+        <form id="send">
+          <input id="handle" type="text" val="" placeholder="Handle">
+          <input id="text" type="text" val="" placeholder="Message">
+          <button>Send</button>
+        </form>
 
-  </body>
+      </div>
+
+        <script src="/chat.js"></script>
+    </body>
 </html>
