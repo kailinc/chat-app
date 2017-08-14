@@ -9,15 +9,25 @@ $('#send').on('submit', function (e) {
   let message = $('#text').val()
   let handle = $('#handle').val()
 
+  // send the message down the socket
   socket.emit('chat', {
     message: message,
     handle: handle
   })
-  // send the message down the socket
+  $('#text').val('')
 })
 
+$('#text').on('keypress', function () {
+  let handle = $('#handle').val()
+  socket.emit('typing', handle)
+})
 // listen for events
 
 socket.on('chat', function(data) {
   $('#output').append('<p><strong>' + data.handle + ': </strong> ' + data.message + '</p>')
+  $('#feedback').html('')
+})
+
+socket.on('typing', function (data) {
+  $('#feedback').html('<p><em>'+ data +' is typing...</em></p>')
 })

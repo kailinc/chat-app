@@ -20,9 +20,6 @@ let io = socket(server)
 
 io.on('connection', (socket) => {
   // socket is the particular socket made in that connection
-  console.log('made socket connection')
-  console.log(socket.id)
-
   socket.on('chat', function (data) {
     // referring the that particular socket
 
@@ -31,6 +28,10 @@ io.on('connection', (socket) => {
     // send the data to all socket connected to the server
   })
   // socket that is connected
+
+  socket.on('typing', function (data) {
+    socket.broadcast.emit('typing', data)
+  })
 
 })
 // listen for connection with browser
