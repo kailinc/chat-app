@@ -15,16 +15,19 @@ server can automatically send data to clients when there is new data.
 
 ## Why AJAX Sucks with Real Time Data
 
-You have to keep sending GET AJAX request to the server to see if there is new information. You can set a timer to send an AJAX request, 
+You have to keep sending GET AJAX request to the server to see if there is new information. You can set a timer to send an AJAX request,
 but that would not be scalable. The design of AJAX request is not suited for real time data dependent application.
 
 ## Tools out there for Web Sockets
 
-
+- Socket.io
+- WS
+- uWebSockets
+- Total.js
 
 ## Resources
 
-Chat APP From The Net Ninja: 
+Chat APP From The Net Ninja:
 https://www.youtube.com/playlist?list=PL4cUxeGkcC9i4V-_ZVwLmOusj8YAUhj_9
 
 WebSockets MDN
