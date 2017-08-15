@@ -6,9 +6,20 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link href="/styles.css" rel="stylesheet" />
+        <script src="assets/scripts/index.js"></script>
     </head>
     <body>
-      <div id="mario-chat">
+
+      <div class="mario-chat">
+        <div id="rooms-window">
+        </div>
+        <form>
+          <input id="createName" type="text" val="" placeholder="Name of Room">
+          <button id="createRoom">Create a Room</button>
+        </form>
+      </div>
+
+      <div class="mario-chat">
         <div id="chat-window">
           <div id="users"></div>
           <div id="output"></div>
@@ -23,6 +34,6 @@
 
       </div>
 
-        <script src="/chat.js"></script>
+        <script src="assets/scripts/chat.js"></script>
     </body>
 </html>
