@@ -22,7 +22,7 @@ io.on('connection', (socket) => {
   // socket is the particular socket made in that connection
   socket.on('chat', function (data) {
     // referring the that particular socket
-
+    data.time = socket.handshake.time
     io.sockets.emit('chat', data)
     // refer to all the socket connected to the server
     // send the data to all socket connected to the server

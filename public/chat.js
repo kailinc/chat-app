@@ -24,7 +24,8 @@ $('#text').on('keypress', function () {
 // listen for events
 
 socket.on('chat', function(data) {
-  $('#output').append('<p><strong>' + data.handle + ': </strong> ' + data.message + '</p>')
+  let modTime = data.time.split(' ')[4]
+  $('#output').append('<p><strong>' + data.handle + ': </strong> ' + data.message + ' @ ' + modTime + '</p>')
   $('#feedback').html('')
 })
 
